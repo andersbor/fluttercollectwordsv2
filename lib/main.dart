@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             const Text('Collect words',
-                style: TextStyle(fontWeight: FontWeight.bold)),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50)),
             TextField(
               controller: myController,
               decoration: const InputDecoration(hintText: "Type a word"),
@@ -134,7 +134,9 @@ class _MyHomePageState extends State<MyHomePage> {
               const Spacer(),
               IconButton(
                 icon: const Icon(Icons.save),
-                onPressed: () {_addWord();},
+                onPressed: () {
+                  _addWord();
+                },
               ),
               IconButton(
                   icon: const Icon(Icons.delete),
@@ -169,6 +171,7 @@ class SecondRoute extends StatelessWidget {
   final List<String> words;
 
   const SecondRoute(this.words, {super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
