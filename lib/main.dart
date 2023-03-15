@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             const Text('Collect words',
                 style: TextStyle(fontWeight: FontWeight.bold)),
@@ -173,11 +173,11 @@ class SecondRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Second Route"),
+        title: const Text("Another page"),
       ),
       body: Center(
         child: Column(children: <Widget>[
-          Text(words.toString()),
+          Text("Words $words"),
           ElevatedButton(
             onPressed: () {
               // Navigate back to first route when tapped.
